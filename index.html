@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/31ffceef22.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                class="form-control shadow-sm"
+                autofocus="on"
+                autocomplete="off"
+                id="city-search-bar"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="submit"
+                value="Get Weather"
+                class="form-control btn btn-primary shadow-sm w-100"
+                id="get-weather-button"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="button"
+                value="📍"
+                class="form-control btn btn-info shadow-sm w-100"
+                id="gps-button"
+              />
+            </div>
+          </div>
+        </form>
+        <h1 id="header-city"></h1>
+        <ul>
+          <li id="current-time"></li>
+          <li id="weather-description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <span class="temperature" id="header-temp"></span
+            ><span class="units">°F</span>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="wind"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 daily">Mon</div>
+          <div class="col-2 daily">Tues</div>
+          <div class="col-2 daily">Wed</div>
+          <div class="col-2 daily">Thurs</div>
+          <div class="col-2 daily">Fri</div>
+          <div class="col-2 daily">Sat</div>
+        </div>
+        <div class="row">
+          <div class="col-2 daily"><i class="far fa-sun daily-icon"></i></div>
+          <div class="col-2 daily"><i class="far fa-sun daily-icon"></i></div>
+          <div class="col-2 daily">
+            <i class="fas fa-cloud-sun-rain daily-icon rain"></i>
+          </div>
+          <div class="col-2 daily">
+            <i class="fas fa-cloud-sun-rain daily-icon rain"></i>
+          </div>
+          <div class="col-2 daily">
+            <i class="fas fa-cloud-showers-heavy rain daily-icon"></i>
+          </div>
+          <div class="col-2 daily">
+            <i class="fas fa-cloud-showers-heavy rain daily-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
