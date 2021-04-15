@@ -78,3 +78,9 @@ a {
   font-size: 32px;
   color: white;
 }
+
+#source-link {
+  display: block;
+  margin: 0 auto;
+  margin-left: 352px;
+}
